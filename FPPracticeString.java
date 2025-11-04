@@ -27,6 +27,9 @@ public class FPPracticeString {
 		// Create a List with lengths of all course titles.
 		listOfAllCourses(courses);
 
+		// print course legnth > 11 and in upperCase
+		course11AndUpperCase(courses);
+
 	}
 
 	private static void allCoursesIndividually(List<String> courses) {
@@ -54,6 +57,11 @@ public class FPPracticeString {
 	private static void listOfAllCourses(List<String> courses) {
 		List<String> allCourses = courses.stream().map(p -> p + "=" + p.length()).collect(Collectors.toList());
 		System.out.println("List Of All COurses is :" + allCourses);
+		System.out.println("=====================================================");
+	}
+
+	private static void course11AndUpperCase(List<String> courses) {
+		courses.stream().filter(m -> m.length() > 11).map(p -> p.toUpperCase()).forEach(System.out::println);
 	}
 
 }
