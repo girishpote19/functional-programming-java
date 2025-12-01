@@ -2,6 +2,8 @@ package CollectionFW;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class LearningList {
@@ -16,6 +18,14 @@ public class LearningList {
 
 		System.out.println("ArrayList numbers are: " + num);
 
+		System.out.println("min number is :"+ Collections.min(num));
+		System.out.println("max number is :"+ Collections.max(num));
+		
+		Collections.sort(num, Comparator.reverseOrder());
+		System.out.println("sorted list desc order" +num);
+		
+		Collections.sort(num);
+		System.out.println("sorted list asc order" +num);
 		//Iterator
 		
 		for (Integer element : num) {
